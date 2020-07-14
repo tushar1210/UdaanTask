@@ -2,24 +2,15 @@
 import express = require ('express');
 import mongoose = require('mongoose');
 import userRoter from './Routers/user'
+import cors=require('cors');
 
 require('dotenv').config()
-
 mongoose.Promise = global.Promise ;
 const PORT = process.env.PORT || 50;
+
 // Instatiate an express App
 var app = express();
-
-app.all('*', function(req, res, next) {
-    var origin = req.get('origin'); 
-    res.header('Access-Control-Allow-Origin', origin);
-    res.header("Access-Control-Allow-Headers", "X-Requested-With");
-    res.header('Access-Control-Allow-Headers', 'Content-Type');
-    next();
-});
-
-
-
+app.use(cors());
 app.set('json spaces', 4);
 app.use(express.static(__dirname + '/Views'));
 app.get('/',(request,response)=>{
