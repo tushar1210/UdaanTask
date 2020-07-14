@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node build/app.js",
-    "build": "tsc src/app.ts",
+    "build": "tsc src/app.ts && gulp",
     "dev": "nodemon -x ts-node build/app.js"
   },
   "author": "Tushar Singh",

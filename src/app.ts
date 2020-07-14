@@ -17,6 +17,10 @@ app.use(function(req, res, next) {
     next();
 });
 
+app.use('/',(response,result)=>{
+    result.render('./Views/index.html')
+})
+
 app.use('/user',userRoter);
 app.listen(PORT,()=>{
 });
