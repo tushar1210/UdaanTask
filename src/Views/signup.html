@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+</head>
+<body>
+    <link rel="stylesheet" href="css/main.css">
+    <script src='js/main.js'></script>
+    <div class="wrapper">
+        <div class="main">
+            <u>Sign Up</u> <br><br>
+            <form>
+                <input type="text" placeholder="User Name" class="textfield" id="username"><br>
+                <input type="password" placeholder="Password" class="textfield" id="password"><br>
+                <input type="password" placeholder="Re-type Password" class="textfield" id="repassword"><br>
+                <input type="text" placeholder="Name" class="textfield" id="name"><br>
+                <input type="text" placeholder="Phone Number" class="textfield" id="phone"><br>
+                <input type="button" value="Sign Up" class="button" id="signup-button" onclick="signup(document.getElementById('username').value,document.getElementById('password').value,document.getElementById('name').value,document.getElementById('phone').value,document.getElementById('repassword').value)">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

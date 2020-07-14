@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <link rel="stylesheet" href="css/main.css">
+    <script src='js/main.js'></script>
+    <div class="wrapper">
+        <div class="main">
+            <u>Login</u> <br><br>
+            <form>
+            <input type="text" placeholder="User Name" class="textfield" id="username">
+            <input type="password" placeholder="Password" class="textfield" id="password">
+            <br>
+            <input type="button" value="Login" class="button" id="login-button" onclick="login(document.getElementById('username').value,document.getElementById('password').value)">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
