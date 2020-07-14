@@ -3,7 +3,7 @@ function login(username,password){
         return alert('Username field cannot be empty, Passsword should be of atleast 8 charaacters');
     var loginRequest = new XMLHttpRequest()
     var params = '?username='+username+'&password='+password ;
-    loginRequest.open('POST','https://udaantask.herokuapp.com/user/login'+params)
+    loginRequest.open('POST','http://localhost:50/user/login'+params)
     loginRequest.onerror = function(e){
         alert('Internal Error : ' + e +'\n Tip: Try restarting the node app');
     }
@@ -29,7 +29,7 @@ function signup(username, password, name, phone ,repassword){
     else if(password.length <8) return alert('Password cannot be of less than 8 characters');
     else if(password != repassword) return alert('Password should be same in both the fields') ;
     var params='?username='+username+'&password='+password+'&name='+name+'&phone='+phone;
-    const url = 'https://udaantask.herokuapp.com/user/register'
+    const url = 'http://localhost:50/user/register'
     var registerRequest = new XMLHttpRequest();
     registerRequest.open('POST',url+params)
     registerRequest.onerror = function(e){
