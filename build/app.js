@@ -18,6 +18,10 @@ app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 });
+app.use(express.static(__dirname + '/Views'));
+app.get('/', function (reques, response) {
+    response.sendFile(__dirname + "/Views/index.html");
+});
 app.use('/user', user_1.default);
 app.listen(PORT, function () {
 });

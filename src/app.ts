@@ -16,10 +16,10 @@ app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 });
-
-app.use('/',(response,result)=>{
-    result.render('./Views/index.html')
-})
+app.use(express.static(__dirname + '/Views'));
+app.get('/',(request,response)=>{
+    response.sendFile(__dirname+"/Views/index.html");
+});
 
 app.use('/user',userRoter);
 app.listen(PORT,()=>{
