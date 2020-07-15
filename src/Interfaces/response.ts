@@ -10,3 +10,18 @@ export interface loginResponse{
     message?:string
 }
 
+export interface getTicket{
+    success:boolean,
+    data?:{
+        id:string,
+        name:string,
+        time:string,
+        date:string,
+        movie:string,
+        venue:string,
+        amount:string
+    }|any,
+    error?:string,
+    message?:string
+
+}

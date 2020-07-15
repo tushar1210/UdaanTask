@@ -25,8 +25,6 @@ mongoose.connect(connString,{useNewUrlParser: true, useUnifiedTopology: true},()
 //Gracefull  disconnect
 process.on('SIGINT', function(){
     mongoose.connection.close(function(){
-      console.log("Mongoose default connection is disconnected due to application termination");
        process.exit(0);
       });
 });
-

@@ -1,9 +1,10 @@
 interface ticket {
     id:string,
-    date:string,
+    name:string,
     time:string,
-    venue?:string,
-    amaount?:string,
-    name:string
+    date:string,
+    movie:string,
+    venue:string,
+    amount:string
 
 }
